@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WindowsInfo xmlns="http://schemas.microsoft.com/windows/DeviceMetadata/WindowsInfo/2007/11/" xmlns:v2="http://schemas.microsoft.com/windows/2010/08/DeviceMetadata/WindowsInfov2">
+  <ShowDeviceInDisconnectedState>false</ShowDeviceInDisconnectedState>
+  <LaunchDeviceStageOnDeviceConnect>false</LaunchDeviceStageOnDeviceConnect>
+  <LaunchDeviceStageFromExplorer>false</LaunchDeviceStageFromExplorer>
+  <v2:WindowsHardwareLogoCertified />
+</WindowsInfo>
