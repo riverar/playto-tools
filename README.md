@@ -12,13 +12,13 @@ Dot-sourced library of cmdlets to tinker with PlayTo in Windows 8/RT
 4. Call <code>New-Metadata [-Install] \<hardware ID\></code> to generate metadata for the device needing certification
 
 ##Tips##
-1. Use helper Get-MediaRenderers to list all DMRs on the network.
+1. Use helper <code>Get-MediaRenderers</code> to list all DMRs on the network.
 2. Expand the HardwareID property to get the entire device hardware ID string.
 
 <code>Get-MediaRenderers | Select -First 1 -exp HardwareID</code>
 
 ##Uninstall##
-1. Navigate to %ProgramData%\Microsoft\Windows\DeviceMetadataStore\en-US and delete all files suffixed with 00000ca710af. These are metadata packages created solely by this script.
+1. Navigate to <code>%ProgramData%\Microsoft\Windows\DeviceMetadataStore\en-US</code> and delete all files suffixed with <code>00000ca710af</code>. These are metadata packages created solely by this script.
 2. Remove devices associated with the custom metadata
 3. Re-add devices. Windows will automatically download new (or use default) metadata.
 
