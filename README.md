@@ -7,9 +7,10 @@ Dot-sourced library of cmdlets to tinker with PlayTo in Windows 8/RT
 
 ##Install##
 1. Start an elevated Powershell instance
-2. Dot source script
-3. Call <code>Suspend-CertifiedDeviceChecks</code> to disable metadata signature checks
-4. Call <code>New-DeviceMetadata [-Install] \<hardware ID\></code> to generate metadata for the device needing certification
+2. <code>Set-ExecutionPolicy Unrestricted</code> if necessary.
+3. Dot source script
+4. Call <code>Suspend-CertifiedDeviceChecks</code> to disable metadata signature checks
+5. Call <code>New-DeviceMetadata [-Install] \<hardware ID\></code> to generate metadata for the device needing certification
 
 ##Tips##
 1. Use helper <code>Get-MediaRenderers</code> to list all DMRs on the network.
