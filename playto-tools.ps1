@@ -238,7 +238,7 @@ function Suspend-CertifiedDeviceChecks
 
 function Get-MediaRenderers()
 {
-    Get-WmiObject Win32_PnPEntity | ? { $_.HardwareID -Like "*MediaRenderer*" } | Select Name, HardwareID
+    Get-WmiObject Win32_PnPEntity | ? { $_.CompatibleID -Like "*MediaRenderer*" -or $_.CompatibleID -Like "*\MS_*DMR*"  } | Select Name, HardwareID
 }
 
 function New-DeviceMetadata()
@@ -267,7 +267,7 @@ function New-DeviceMetadata()
     $pkginfo = "$scratch\PackageInfo.xml"
 
     (Get-Content $pkginfo | ForEach {
-        $buffer = $_ -replace "{hwid}", "DOID:$($device.HardwareID[0])"
+        $buffer = $_ -replace "{hwid}", [System.Web.HttpUtility]::HtmlEncode("DOID:$($device.HardwareID[0])")
         $buffer = $buffer -replace "{lastmodified}", ([DateTime]::UtcNow.ToString("yyyy'-'MM'-'dd'T'HH':'mm':'ss'Z'"))
         $buffer -replace "{experienceid}", $scratch }) | Out-File $pkginfo -Encoding utf8
     
