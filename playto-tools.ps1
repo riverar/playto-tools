@@ -238,7 +238,7 @@ function Suspend-CertifiedDeviceChecks
 
 function Get-MediaRenderers()
 {
-    Get-WmiObject Win32_PnPEntity | ? { $_.HardwareID -Like "UMB\*" } | Select Name, HardwareID
+    Get-WmiObject Win32_PnPEntity | ? { $_.CompatibleID -Like "*MediaRenderer*" -or $_.CompatibleID -Like "*\MS_*DMR*"  } | Select Name, HardwareID
 }
 
 function New-DeviceMetadata()
