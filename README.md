@@ -16,7 +16,7 @@ Dot-sourced library of cmdlets to tinker with PlayTo in Windows 8/RT
 1. Use helper <code>Get-MediaRenderers</code> to list all DMRs on the network.
 2. Expand the HardwareID property to get the entire device hardware ID string.
 
-<code>Get-MediaRenderers | Select -First 1 -exp HardwareID</code>
+<code>Get-MediaRenderers | ? Name -like "*popcorn*" | Select -exp HardwareID | Select -first 1</code>
 
 ##Uninstall##
 1. Navigate to <code>%ProgramData%\Microsoft\Windows\DeviceMetadataStore\en-US</code> and delete all files suffixed with <code>00000ca710af</code>. These are metadata packages created solely by this script.
