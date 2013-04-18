@@ -26,4 +26,5 @@ Dot-sourced library of cmdlets to tinker with PlayTo in Windows 8/RT
 ##Pull request ideas##
 * Finish Windows RT support (will need restricted language workarounds)
 * Add non-US locale support (if needed)
+* Windows 8 32 bit support
 * (your idea here)
