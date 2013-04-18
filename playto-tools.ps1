@@ -1,5 +1,7 @@
 #requires -Version 3.0
 
+Add-Type -AssemblyName System.Web
+
 function Suspend-CertifiedDeviceChecks
 {
     $_unwind = New-Object Collections.Stack
